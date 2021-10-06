@@ -1,11 +1,10 @@
 INICIO
-************ Registro 4/10/2021 22:34:16 ************
+************ Registro 6/10/2021 1:19:7 ************
 
 ALUNO 1: 
-	Prontuário: 1
-	Nome: 1
-	Data Nascimento: 1
-	E-Mail: 1
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
 
 NOTAS:
 	Exercícios: 10,00
@@ -19,111 +18,366 @@ SITUAÇÃO:
 ------------------------------------
 
 ALUNO 2: 
-	Prontuário: 2
-	Nome: 2
-	Data Nascimento: 2
-	E-Mail: 2
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br2
 
 NOTAS:
-	Exercícios: 8,00
-	Projeto: 5,00
-	Prova Prática: 6,00
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
 
 SITUAÇÃO:
-	Média: 6,33
-	REPROVADO
+	Média: 9,00
+	APROVADO
 
 ------------------------------------
 
 ALUNO 3: 
-	Prontuário: 3
-	Nome: Messias Oliveira
-
-	Data Nascimento: 3
-	E-Mail: 3
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
 
 NOTAS:
-	Exercícios: 0,00
-	Projeto: 0,00
-	Prova Prática: 0,00
+	Exercícios: 10,00
+	Projeto: 10,00
+	Prova Prática: 10,00
 
 SITUAÇÃO:
-	Média: 0,00
-	REPROVADO
+	Média: 10,00
+	APROVADO
 
 ------------------------------------
-********************************
-FIM
 
-INICIO
-************ Registro 4/10/2021 23:22:21 ************
-
-ALUNO CANCELADOS -1: 
-	Prontuário: 3009571	Nome: Messias Silva
-	Data Nascimento: 19/07/1991
-	E-Mail: messias.oliveira@hotmail.com
+ALUNO 4: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br2
 
 NOTAS:
-	Exercícios: 2,00
-	Projeto: 7,50
-	Prova Prática: 8,90
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
 
 SITUAÇÃO:
-	Média: 6,13
-	REPROVADO
+	Média: 9,00
+	APROVADO
+
+------------------------------------
+
+ALUNO CANCELADOS -1: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
 
 ------------------------------------
 
 ALUNO CANCELADOS 0: 
-	Prontuário: 3009573	Nome: Messias Oliveira
-	Data Nascimento: 19/07/1992
-	E-Mail: messias.oliveira@gmail.com
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
 
-NOTAS:
-	Exercícios: 5,89
-	Projeto: 9,85
-	Prova Prática: 3,99
-
-SITUAÇÃO:
-	Média: 6,58
-	REPROVADO
 
 ------------------------------------
 ********************************
 FIM
 
 INICIO
-************ Registro 4/10/2021 23:39:45 ************
+************ Registro 6/10/2021 1:20:44 ************
 
 ALUNO 1: 
-	Prontuário: 1	Nome: 1
-	Data Nascimento: 1
-	E-Mail: 1
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
 
 NOTAS:
-	Exercícios: 7,00
-	Projeto: 5,00
-	Prova Prática: 6,00
+	Exercícios: 10,00
+	Projeto: 10,00
+	Prova Prática: 10,00
 
 SITUAÇÃO:
-	Média: 6,00
-	REPROVADO
+	Média: 10,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 2: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br2
+
+NOTAS:
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
+
+SITUAÇÃO:
+	Média: 9,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 3: 
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
+
+NOTAS:
+	Exercícios: 10,00
+	Projeto: 10,00
+	Prova Prática: 10,00
+
+SITUAÇÃO:
+	Média: 10,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 4: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br2
+
+NOTAS:
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
+
+SITUAÇÃO:
+	Média: 9,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 5: 
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
+
+NOTAS:
+	Exercícios: 10,00
+	Projeto: 10,00
+	Prova Prática: 10,00
+
+SITUAÇÃO:
+	Média: 10,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 6: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br2
+
+NOTAS:
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
+
+SITUAÇÃO:
+	Média: 9,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 7: 
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
+
+NOTAS:
+	Exercícios: 10,00
+	Projeto: 10,00
+	Prova Prática: 10,00
+
+SITUAÇÃO:
+	Média: 10,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 8: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br2
+
+NOTAS:
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
+
+SITUAÇÃO:
+	Média: 9,00
+	APROVADO
 
 ------------------------------------
 
 ALUNO CANCELADOS -1: 
-	Prontuário: 1	Nome: Messias
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
+
+------------------------------------
+
+ALUNO CANCELADOS 0: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
+
+------------------------------------
+
+ALUNO CANCELADOS 1: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
+
+------------------------------------
+
+ALUNO CANCELADOS 2: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
+
+------------------------------------
+********************************
+FIM
+
+INICIO
+************ Registro 6/10/2021 1:21:28 ************
+
+ALUNO 1: 
+	Prontuário: 1	Nome: Messias Oliveira
 	Data Nascimento: 19/07/1992
-	E-Mail: messias.oliveira@gmail.com
+	E-Mail: messias@teste.com
 
 NOTAS:
-	Exercícios: 7,00
-	Projeto: 5,00
-	Prova Prática: 6,00
+	Exercícios: 10,00
+	Projeto: 10,00
+	Prova Prática: 10,00
 
 SITUAÇÃO:
-	Média: 6,00
-	REPROVADO
+	Média: 10,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 2: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br2
+
+NOTAS:
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
+
+SITUAÇÃO:
+	Média: 9,00
+	APROVADO
+
+------------------------------------
+
+ALUNO CANCELADOS -1: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
+
+------------------------------------
+********************************
+FIM
+
+INICIO
+************ Registro 6/10/2021 1:21:56 ************
+
+ALUNO 1: 
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
+
+NOTAS:
+	Exercícios: 10,00
+	Projeto: 10,00
+	Prova Prática: 10,00
+
+SITUAÇÃO:
+	Média: 10,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 2: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br
+
+NOTAS:
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
+
+SITUAÇÃO:
+	Média: 9,00
+	APROVADO
+
+------------------------------------
+
+ALUNO CANCELADOS -1: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
+
+------------------------------------
+********************************
+FIM
+
+INICIO
+************ Registro 6/10/2021 1:22:7 ************
+
+ALUNO 1: 
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
+
+NOTAS:
+	Exercícios: 10,00
+	Projeto: 10,00
+	Prova Prática: 10,00
+
+SITUAÇÃO:
+	Média: 10,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 2: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br
+
+NOTAS:
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
+
+SITUAÇÃO:
+	Média: 9,00
+	APROVADO
+
+------------------------------------
+
+ALUNO CANCELADOS -1: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
 
 ------------------------------------
 ********************************

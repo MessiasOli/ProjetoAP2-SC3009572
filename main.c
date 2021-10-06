@@ -594,9 +594,131 @@ void MostrarMenuRelatorio(Aluno* lista, Aluno *listaAlunosExcluidos, Notas *list
     }while(running);
 }
 
+void CarregarAluno(FILE *coletor, Aluno *lista)
+{
+    char c;
+    int i = 0;
+    int ichar = 0;
+    int iAlunoProperty = 0;
+    char buffer[N_CHAR];
+    Aluno a;
+    do{
+        c = fgetc(coletor);
+
+        if(c != '|' && c != '\n' && c != '\0')
+            buffer[ichar++] = c;
+
+        if(c == '|'){
+            buffer[ichar] = '\0';
+
+            if(iAlunoProperty == 0 )
+            {
+                strcpy(a.prontuario, buffer);
+            }
+            else if(iAlunoProperty == 1)
+            {
+                strcpy(a.nome, buffer);
+            }
+            else if(iAlunoProperty == 2)
+            {
+                strcpy(a.dataNasc, buffer);
+            }
+            else if(iAlunoProperty == 3)
+            {
+                strcpy(a.eMail, buffer);
+                lista[i] = a;
+                i++;
+                iAlunoProperty = -1;
+            }
+
+            if(c == '|'){
+                strcpy(buffer, "");
+                ichar = 0;
+            }
+
+            iAlunoProperty++;
+        }
+
+    }while (c != EOF);
+}
+
+void CarregarNotas(FILE *coletor, Notas *lista)
+{
+    char c;
+    int i = 0;
+    int ichar = 0;
+    int iAlunoProperty = 0;
+    char buffer[N_CHAR];
+    Notas n;
+    do{
+        c = fgetc(coletor);
+
+        if(c != '|' && c != '\n' && c != '\0')
+            buffer[ichar++] = c;
+
+        if(c == '|'){
+            buffer[ichar] = '\0';
+
+            if(iAlunoProperty == 0 )
+            {
+                strcpy(n.id, buffer);
+            }
+            else if(iAlunoProperty == 1)
+            {
+                n.listaExercicio =  atoi(buffer);
+            }
+            else if(iAlunoProperty == 2)
+            {
+                n.projeto =  atoi(buffer);
+            }
+            else if(iAlunoProperty == 3)
+            {
+                n.provaPratic =  atoi(buffer);
+                lista[i] = n;
+                i++;
+                iAlunoProperty = -1;
+            }
+
+            if(c == '|'){
+                strcpy(buffer, "");
+                ichar = 0;
+            }
+
+            iAlunoProperty++;
+        }
+
+    }while (c != EOF);
+}
+
+void LerDadosDosArquivos(Aluno *listaAlunos, Aluno *listaAlunosExcluidos, Notas *listaNotas)
+{
+    FILE *lerAlunos = fopen("DadosAlunos.txt","r");
+    FILE *lerAlunosExcluidos = fopen("DadosAlunosExcluidos.txt","r");
+    FILE *lerNotas = fopen("DadosNotas.txt","r");
+
+    printf("Carregando dados do aluno...\n");
+    if (lerAlunos == NULL && lerAlunosExcluidos == NULL){
+        printf("Falha ao ler o arquivos de recuperação!\n\n");
+        return;
+    }
+
+    CarregarAluno(lerAlunos, listaAlunos);
+    CarregarAluno(lerAlunosExcluidos, listaAlunosExcluidos);
+    CarregarNotas(lerNotas, listaNotas);
+
+    printf("Dados carregados!\n\n");
+
+    fclose(lerAlunos);
+    fclose(lerAlunosExcluidos);
+    fclose(lerNotas);
+}
+
 void SalvaDadosNoArquivo(Aluno *listaAlunos, Aluno *listaExcluidos, Notas *listaNotas) {
 	int i;
 	FILE *registrador = fopen("RegistrosAlunos.txt","a");
+	FILE *salvaAlunos = fopen("DadosAlunos.txt","w");
+	FILE *salvaAlunosExcluidos = fopen("DadosAlunosExcluidos.txt","w");
+	FILE *salvaNotas = fopen("DadosNotas.txt","w");
 
     struct tm *data_hora_atual;
 	time_t segundos;
@@ -625,12 +747,22 @@ void SalvaDadosNoArquivo(Aluno *listaAlunos, Aluno *listaExcluidos, Notas *lista
 		fprintf(registrador, "\tData Nascimento: %s\n", listaAlunos[i].dataNasc);
 		fprintf(registrador, "\tE-Mail: %s\n\n", listaAlunos[i].eMail);
 
+		fprintf(salvaAlunos, "%s|", listaAlunos[i].prontuario);
+		fprintf(salvaAlunos, "%s|", listaAlunos[i].nome);
+		fprintf(salvaAlunos, "%s|", listaAlunos[i].dataNasc);
+		fprintf(salvaAlunos, "%s|\n", listaAlunos[i].eMail);
+
 		int j = PegarIndiceNotaPorProntuario(listaAlunos[i], listaNotas);
 
 		fprintf(registrador, "NOTAS:\n");
 		fprintf(registrador, "\tExercícios: %.2f\n", listaNotas[j].listaExercicio);
 		fprintf(registrador, "\tProjeto: %.2f\n", listaNotas[j].projeto);
 		fprintf(registrador, "\tProva Prática: %.2f\n\n", listaNotas[j].provaPratic);
+
+		fprintf(salvaNotas, "%s|", listaNotas[j].id);
+		fprintf(salvaNotas, "%f|", listaNotas[j].listaExercicio);
+		fprintf(salvaNotas, "%f|", listaNotas[j].projeto);
+		fprintf(salvaNotas, "%f|\n", listaNotas[j].provaPratic);
 
 		float media = CalcularMediaNota(listaNotas[j]);
 		fprintf(registrador, "SITUAÇÃO:\n");
@@ -644,6 +776,8 @@ void SalvaDadosNoArquivo(Aluno *listaAlunos, Aluno *listaExcluidos, Notas *lista
 		fprintf(registrador, "\n------------------------------------\n");
 
 		fflush(registrador);
+		fflush(salvaAlunos);
+		fflush(salvaNotas);
 	}
 
     for (i = 0; i < Q_ALUNOS; i++) {
@@ -658,96 +792,24 @@ void SalvaDadosNoArquivo(Aluno *listaAlunos, Aluno *listaExcluidos, Notas *lista
 		fprintf(registrador, "\tData Nascimento: %s\n", listaExcluidos[i].dataNasc);
 		fprintf(registrador, "\tE-Mail: %s\n\n", listaExcluidos[i].eMail);
 
-		int j = PegarIndiceNotaPorProntuario(listaExcluidos[i], listaNotas);
-
-		fprintf(registrador, "NOTAS:\n");
-		fprintf(registrador, "\tExercícios: %.2f\n", listaNotas[j].listaExercicio);
-		fprintf(registrador, "\tProjeto: %.2f\n", listaNotas[j].projeto);
-		fprintf(registrador, "\tProva Prática: %.2f\n\n", listaNotas[j].provaPratic);
-
-		float media = CalcularMediaNota(listaNotas[j]);
-		fprintf(registrador, "SITUAÇÃO:\n");
-		fprintf(registrador, "\tMédia: %.2f\n", media);
-
-		if(media >= 7)
-            fprintf(registrador, "\tAPROVADO\n");
-        else
-            fprintf(registrador, "\tREPROVADO\n");
+		fprintf(salvaAlunosExcluidos, "%s|", listaExcluidos[i].prontuario);
+		fprintf(salvaAlunosExcluidos, "%s|", listaExcluidos[i].nome);
+		fprintf(salvaAlunosExcluidos, "%s|", listaExcluidos[i].dataNasc);
+		fprintf(salvaAlunosExcluidos, "%s|\n", listaExcluidos[i].eMail);
 
 		fprintf(registrador, "\n------------------------------------\n");
 
 		fflush(registrador);
+		fflush(salvaAlunosExcluidos);
 	}
 
     fprintf(registrador, "********************************\nFIM\n\n");
     fflush(registrador);
+
 	fclose(registrador);
-}
-
-void CarregarDadosMocados(Aluno *listaAluno, Aluno *listaExcluidos, Notas *listaNotas)
-{
-
-    strcpy(listaAluno[0].prontuario, "1\n\0");
-    strcpy(listaAluno[0].nome, "Messias Oliveira 1");
-    strcpy(listaAluno[0].dataNasc, "19/07/1992");
-    strcpy(listaAluno[0].eMail, "messias@teste.com");
-
-    strcpy(listaAluno[1].prontuario, "2\n\0");
-    strcpy(listaAluno[1].nome, "Aline Cristina");
-    strcpy(listaAluno[1].dataNasc, "19/07/1993");
-    strcpy(listaAluno[1].eMail, "aline@teste.com");
-
-    strcpy(listaAluno[2].prontuario, "3\n\0");
-    strcpy(listaAluno[2].nome, "Thais de Paula");
-    strcpy(listaAluno[2].dataNasc, "23/01/1993");
-    strcpy(listaAluno[2].eMail, "thais@teste.com");
-
-    strcpy(listaAluno[3].prontuario, "4\n\0");
-    strcpy(listaAluno[3].nome, "Roger Almeida");
-    strcpy(listaAluno[3].dataNasc, "19/07/1985");
-    strcpy(listaAluno[3].eMail, "roger@teste.com");
-
-    strcpy(listaAluno[4].prontuario, "5\n\0");
-    strcpy(listaAluno[4].nome, "Fabricio Nascimento");
-    strcpy(listaAluno[4].dataNasc, "19/07/1997");
-    strcpy(listaAluno[4].eMail, "fabricio@teste.com");
-
-    strcpy(listaAluno[5].prontuario, "6\n\0");
-    strcpy(listaAluno[5].nome, "Claudio Nascimento");
-    strcpy(listaAluno[5].dataNasc, "19/07/1997");
-    strcpy(listaAluno[5].eMail, "claudio@teste.com");
-
-    strcpy(listaExcluidos[0].prontuario, "3009575\n\0");
-    strcpy(listaExcluidos[0].nome, "Messias Oliveira 4");
-    strcpy(listaExcluidos[0].dataNasc, "19/07/1992");
-    strcpy(listaExcluidos[0].eMail, "messias@teste.com");
-
-
-    strcpy(listaNotas[0].id, "1\n\0");
-    listaNotas[0].listaExercicio = 10;
-    listaNotas[0].projeto = 7.55;
-    listaNotas[0].provaPratic = 6.88;
-
-    strcpy(listaNotas[1].id, "2\n\0");
-    listaNotas[1].listaExercicio = 9.89;
-    listaNotas[1].projeto = 9.55;
-    listaNotas[1].provaPratic = 9.4;
-
-    strcpy(listaNotas[2].id, "3\n\0");
-    listaNotas[2].listaExercicio = 9.6;
-    listaNotas[2].projeto = 9.55;
-    listaNotas[2].provaPratic = 8.66;
-
-    strcpy(listaNotas[3].id, "4\n\0");
-    listaNotas[3].listaExercicio = 9.89;
-    listaNotas[3].projeto = 9.55;
-    listaNotas[3].provaPratic = 9.4;
-
-    strcpy(listaNotas[4].id, "5\n\0");
-    listaNotas[4].listaExercicio = 5.6;
-    listaNotas[4].projeto = 5.55;
-    listaNotas[4].provaPratic = 5.66;
-
+	fclose(salvaAlunos);
+	fclose(salvaNotas);
+	fclose(salvaAlunosExcluidos);
 }
 
 int main()
@@ -768,9 +830,9 @@ int main()
     inicializaListaAluno(listaAlunosExcluidos);
     inicializaListaNotas(listaNotas);
 
-    /* CarregarDadosMocados(listaAlunos, listaAlunosExcluidos, listaNotas); */
-
     printf("PROJETO AP2\n\n");
+    LerDadosDosArquivos(listaAlunos, listaAlunosExcluidos, listaNotas);
+
     do
     {
         printf("Escolha uma opção: \n");
