@@ -383,3 +383,186 @@ ALUNO CANCELADOS -1:
 ********************************
 FIM
 
+INICIO
+************ Registro 6/10/2021 7:34:0 ************
+
+ALUNO 1: 
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
+
+NOTAS:
+	Exercícios: 10,00
+	Projeto: 10,00
+	Prova Prática: 10,00
+
+SITUAÇÃO:
+	Média: 10,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 2: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br
+
+NOTAS:
+	Exercícios: 9,00
+	Projeto: 9,00
+	Prova Prática: 9,00
+
+SITUAÇÃO:
+	Média: 9,00
+	APROVADO
+
+------------------------------------
+
+ALUNO 3: 
+	Prontuário: 3	Nome: Thais Paula
+	Data Nascimento: 23/01/1993
+	E-Mail: thais@teste.com
+
+NOTAS:
+	Exercícios: 7,55
+	Projeto: 8,66
+	Prova Prática: 6,31
+
+SITUAÇÃO:
+	Média: 7,51
+	APROVADO
+
+------------------------------------
+
+ALUNO CANCELADOS -1: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
+
+------------------------------------
+********************************
+FIM
+
+INICIO
+************ Registro 6/10/2021 7:38:29 ************
+
+ALUNO 1: 
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
+
+NOTAS:
+	Exercícios: 10,56
+	Projeto: 10,97
+	Prova Prática: 10,99
+
+SITUAÇÃO:
+	Média: 10,84
+	APROVADO
+
+------------------------------------
+
+ALUNO 2: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br
+
+NOTAS:
+	Exercícios: 9,96
+	Projeto: 9,96
+	Prova Prática: 9,95
+
+SITUAÇÃO:
+	Média: 9,96
+	APROVADO
+
+------------------------------------
+
+ALUNO 3: 
+	Prontuário: 3	Nome: Thais Paula
+	Data Nascimento: 23/01/1993
+	E-Mail: thais@teste.com
+
+NOTAS:
+	Exercícios: 7,55
+	Projeto: 8,66
+	Prova Prática: 6,31
+
+SITUAÇÃO:
+	Média: 7,51
+	APROVADO
+
+------------------------------------
+
+ALUNO CANCELADOS -1: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
+
+------------------------------------
+********************************
+FIM
+
+INICIO
+************ Registro 6/10/2021 7:39:8 ************
+
+ALUNO 1: 
+	Prontuário: 1	Nome: Messias Oliveira
+	Data Nascimento: 19/07/1992
+	E-Mail: messias@teste.com
+
+NOTAS:
+	Exercícios: 8,56
+	Projeto: 9,97
+	Prova Prática: 7,99
+
+SITUAÇÃO:
+	Média: 8,84
+	APROVADO
+
+------------------------------------
+
+ALUNO 2: 
+	Prontuário: 2	Nome: Messias Oliveira2
+	Data Nascimento: 19/07/1993
+	E-Mail: messias@teste.com.br
+
+NOTAS:
+	Exercícios: 9,96
+	Projeto: 9,96
+	Prova Prática: 9,95
+
+SITUAÇÃO:
+	Média: 9,96
+	APROVADO
+
+------------------------------------
+
+ALUNO 3: 
+	Prontuário: 3	Nome: Thais Paula
+	Data Nascimento: 23/01/1993
+	E-Mail: thais@teste.com
+
+NOTAS:
+	Exercícios: 7,55
+	Projeto: 8,66
+	Prova Prática: 6,31
+
+SITUAÇÃO:
+	Média: 7,51
+	APROVADO
+
+------------------------------------
+
+ALUNO CANCELADOS -1: 
+	Prontuário: 3	Nome: Jucelino kubicheck
+	Data Nascimento: 19/05/1815
+	E-Mail: jucelino@teste.com
+
+
+------------------------------------
+********************************
+FIM
+

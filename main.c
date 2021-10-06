@@ -665,15 +665,15 @@ void CarregarNotas(FILE *coletor, Notas *lista)
             }
             else if(iAlunoProperty == 1)
             {
-                n.listaExercicio =  atoi(buffer);
+                n.listaExercicio =  atof(buffer);
             }
             else if(iAlunoProperty == 2)
             {
-                n.projeto =  atoi(buffer);
+                n.projeto =  atof(buffer);
             }
             else if(iAlunoProperty == 3)
             {
-                n.provaPratic =  atoi(buffer);
+                n.provaPratic =  atof(buffer);
                 lista[i] = n;
                 i++;
                 iAlunoProperty = -1;
@@ -696,7 +696,7 @@ void LerDadosDosArquivos(Aluno *listaAlunos, Aluno *listaAlunosExcluidos, Notas 
     FILE *lerAlunosExcluidos = fopen("DadosAlunosExcluidos.txt","r");
     FILE *lerNotas = fopen("DadosNotas.txt","r");
 
-    printf("Carregando dados do aluno...\n");
+    printf("Carregando dados dos alunos...\n");
     if (lerAlunos == NULL && lerAlunosExcluidos == NULL){
         printf("Falha ao ler o arquivos de recuperação!\n\n");
         return;
